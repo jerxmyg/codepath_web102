@@ -20,12 +20,18 @@ body{
   }
   
   .information{
-    text-align:center;
+    font-family: "Lucidia Console", monospace;
+    font-weight: bold;
+    color: oldlace;
+    font-size: 25px;
+    text-align: center;
+    
+  
   }
   
   .flashcards{
     padding:100px;
     box-shadow:0px 0px 10px black;
-    background-color:beige;
+    background-color:aquamarine;
   }
   
