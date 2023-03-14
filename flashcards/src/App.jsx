@@ -7,8 +7,8 @@ import Flashcard from './components/Flashcards.jsx';
 
 
 
-const App = () => {
-
+function App()  {
+  //const [count, setCount] = useState(0);
   
   
   const ok = () => {
@@ -41,6 +41,8 @@ const App = () => {
 
   const [text, changeText] = React.useState(card.props.question)
 
+
+
   console.log(card.props.question)
   const question = card.props.question
   const answer = card.props.answer 
@@ -57,6 +59,7 @@ const App = () => {
       changeText(question)
     }
   }
+  
 
   const shuffle = () => {
     
@@ -67,19 +70,21 @@ const App = () => {
   }
 
   const forward = () => {
-    
-    const newCard = Flashcards[Math.floor(Math.random()*Flashcards.length)]
-    
-    changeText(newCard.props.question)
-    changeFlashcard(newCard)
+    if(count < Flashcards.length -1) {
+      setCount(count+1)
+    }
   }
 
   const back = () => {
-    
-    const newCard = Flashcards[Math.floor(Math.random()*Flashcards.length)]
-    
-    changeText(newCard.props.question)
-    changeFlashcard(newCard)
+    {console.log(count)}
+    if (count > 0) {
+
+      setCount(count-1)
+    }
+  }
+
+  const guess = () => {
+
   }
   
 
@@ -104,8 +109,10 @@ const App = () => {
         <button onClick={back} className="backArrow"> <img src={backArrow} width="40px"/> </button>
 
         <button onClick={forward} className="forwardArrow"> <img src={arrow} width="40px"/> </button>
-        
+
         <button onClick={shuffle} className="shuffleButton"> Shuffle </button>
+        
+        <button onClick={guess} className="guessButton"> Guess </button>
 
 
     </div>
