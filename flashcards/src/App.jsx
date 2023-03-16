@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from "react";
 import './App.css'
 import arrow from './assets/arrow.png'
 import backArrow from './assets/backArrow.png'
@@ -8,7 +9,7 @@ import Flashcard from './components/Flashcards.jsx';
 
 
 function App()  {
-  //const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
   
   
   const ok = () => {
@@ -70,18 +71,22 @@ function App()  {
   }
 
   const forward = () => {
-    if(count < Flashcards.length -1) {
-      setCount(count+1)
-    }
+
+    const flashwhatever = count + 1
+    changeText(Flashcards[flashwhatever].props.question)
+    changeFlashcard(Flashcards[flashwhatever])
+    setCount(flashwhatever)
+    
   }
 
   const back = () => {
-    {console.log(count)}
-    if (count > 0) {
-
-      setCount(count-1)
+    
+    const flashwhatever = count - 1
+    changeText(Flashcards[flashwhatever].props.question)
+    changeFlashcard(Flashcards[flashwhatever])
+    setCount(flashwhatever)
     }
-  }
+  
 
   const guess = () => {
 
