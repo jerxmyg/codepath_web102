@@ -18,6 +18,8 @@ function App() {
     fetchData().catch(console.error)
   }, [])
 
+  console.log(list)
+
   const newList = list.filter(character => character.tvShows.length !== 0 & character.films.length !== 0)
   
   const [filteredList, setFilteredList] = useState()
@@ -57,7 +59,7 @@ function App() {
     <div>
       <h1 className="title">🛸👽 Gravity Falls Characters 👽🛸</h1>
       <p> Growing up, Gravity Falls was one of my favorite Disney cartoons!</p>
-      <p> So for this project I decided to use the Disney API to figure out where the charcters appear in different shows 😳 </p>
+      <p> So for this project I decided to use the Disney API to figure out where the mythical and monsterous characters appear in different Disney shows 😳 </p>
       <div className="forms">
         <div>
           <label className="form">Name</label>
