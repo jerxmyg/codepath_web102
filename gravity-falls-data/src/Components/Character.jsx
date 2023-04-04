@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react'
+import { Link } from "react-router-dom"
 
 
 const Character = ({ image, tvShows, videoGames, films, name}) => {
+  const URL = `/character/${name}`
   return(
     <div className="character">
       <div className="character-visual">
-        <div className="name">{name}</div>
+        <div className="name">
+          <Link to={URL} className="linkButton">{name}</Link>
+        </div>
+
         <img src={image} width="200px" alt={name}/>
       </div>
       <div className="section">
