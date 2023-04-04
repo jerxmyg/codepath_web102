@@ -68,7 +68,7 @@ Time spent: 6 hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **The app includes at least two unique chart developed using the fetched data that tell an interesting story**
+- [] **The app includes at least two unique chart developed using the fetched data that tell an interesting story**
 - [x] **Clicking on an item in the list view displays more details about it**
 - [x] **Clicking on an item has a direct, unique link to that item's detail view page**
 
@@ -86,7 +86,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='gravity-falls-data/Kapture 2023-04-04 at 01.18.25.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Kap!
 
