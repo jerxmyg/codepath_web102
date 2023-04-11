@@ -1,14 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import App from './App'
+import './index.css'
+import Layout from './routes/Layout'
+import EditPlayer from './pages/EditAvatar'
+import CreatePlayer from './pages/CreateAvatar'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/" element ={<Layout />}>
+          <Route index={true} element={<App />}/>
+          <Route path="/create" element={<CreatePlayer />}/>
+          <Route path="/edit" element={<EditPlayer />}/>
+         
+        </Route>
+      </Routes>
     </BrowserRouter>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
