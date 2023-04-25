@@ -1,0 +1,53 @@
+.ReadPosts {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.readContent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postGallery{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    color:white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  .topButtons{
+    display: flex;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+.header{
+    width: 100%;
+    color:white;
+    text-align: center;
+  }
+  .headerBtn {
+    margin-bottom: 50px;
+    margin-right: 10px;
+  }
+
+  
+
